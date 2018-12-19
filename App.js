@@ -40,7 +40,7 @@ export default class App extends React.Component {
 
 const PHOTO_INTERVAL = 4000;
 const FOCUS_TIME = 1000;
-const SERVER_URL = "http://192.168.1.45:5005/";
+const SERVER_URL = "http://10.100.105.51:5005/";
 
 class Autoshoot extends React.Component {
   state = {

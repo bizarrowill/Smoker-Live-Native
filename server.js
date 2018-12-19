@@ -23,6 +23,32 @@ app.post("/", (req, res) => {
   res.sendStatus(200);
 });
 
+//  this is not a secure setup. We’re assuming that the client sent us a good base64 image, but Rule 1 is “Don’t trust the client” – we should be validating the image before storing it.
+
+// View latest image
+app.get("/", (req, res) => {
+  // Does this session have an image yet?
+  if (!latestPhoto) {
+    return res.status(404).send("Nothing here yet");
+  }
+
+  console.log("sending photo");
+
+  try {
+    // Send the image
+    var img = Buffer.from(latestPhoto, "base64");
+    res.writeHead(200, {
+      "Content-Type": "image/png",
+      "Content-Length": img.length
+    });
+    res.end(img);
+  } catch (e) {
+    // Log the error and stay alive
+    console.log(e);
+    return res.sendStatus(500);
+  }
+});
+
 const port = process.env.PORT || 5005;
 app.listen(port);
 
