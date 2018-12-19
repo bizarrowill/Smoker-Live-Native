@@ -9,4 +9,5 @@ To run locally:
 
 `run node server.js`
 
-- need to hard code local host into <autoshoot/> component currently to view the latest image.
+- need to hard code local host into const SERVER_URL component currently to view the latest image.
+  `const SERVER_URL = "http://10.100.105.51:5005/";`
