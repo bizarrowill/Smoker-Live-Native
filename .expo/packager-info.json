@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 98971,
-  "expoServerNgrokUrl": "https://na-6e6.bizarrowill.smoker-live-native.exp.direct",
-  "packagerNgrokUrl": "https://packager.na-6e6.bizarrowill.smoker-live-native.exp.direct",
-  "ngrokPid": 98982
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
